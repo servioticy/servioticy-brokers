@@ -13,6 +13,7 @@ In all cases:
 
 Payload structure example:
 
+<code>
 {
    "meta": {
      "authorization": "API_TOKEN HERE",
@@ -34,19 +35,19 @@ Payload structure example:
      }
    }
 }
-
+</code>
 
 For MQTT, the topic structure is:
 
-  “API_TOKEN/from” to send requests to the API
-  “API_TOKEN/to” to receive responses to the API
+  <code>“API_TOKEN/from”</code> to send requests to the API
+  <code>“API_TOKEN/to”</code> to receive responses to the API
 
-  Updates produced by subscriptions: “API_TOKEN/SOid/updates”
+  Updates produced by subscriptions: <code>“API_TOKEN/SOid/updates”</code>
 
 
 For STOMP (either over TCP or WS), the topic structure is:
 
-  “/topic/API_TOKEN.from” to send requests to the API
-  “/topic/API_TOKEN.to” to receive responses to the API
+  <code>“/topic/API_TOKEN.from”</code> to send requests to the API
+  <code>“/topic/API_TOKEN.to”</code> to receive responses to the API
 
-  Updates produced by subscriptions: “/topic/API_TOKEN.SOid.updates”
+  Updates produced by subscriptions: <code>“/topic/API_TOKEN.SOid.updates”</code>
