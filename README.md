@@ -11,9 +11,9 @@ In all cases:
   User: compose
   Password: shines
 
-Payload structure example:
+**Payload structure example**:
 
-<code>
+```json
 {
    "meta": {
      "authorization": "API_TOKEN HERE",
@@ -35,19 +35,19 @@ Payload structure example:
      }
    }
 }
-</code>
+```
 
-For MQTT, the topic structure is:
+**For MQTT, the topic structure is**:
 
-  <code>“API_TOKEN/from”</code> to send requests to the API
-  <code>“API_TOKEN/to”</code> to receive responses to the API
+- <code>“API_TOKEN/from”</code> to send requests to the API
+- <code>“API_TOKEN/to”</code> to receive responses to the API
 
-  Updates produced by subscriptions: <code>“API_TOKEN/SOid/updates”</code>
+- Updates produced by subscriptions: <code>“API_TOKEN/SOid/updates”</code>
 
 
-For STOMP (either over TCP or WS), the topic structure is:
+**For STOMP (either over TCP or WS), the topic structure is**:
 
-  <code>“/topic/API_TOKEN.from”</code> to send requests to the API
-  <code>“/topic/API_TOKEN.to”</code> to receive responses to the API
+- <code>“/topic/API_TOKEN.from”</code> to send requests to the API
+- <code>“/topic/API_TOKEN.to”</code> to receive responses to the API
 
-  Updates produced by subscriptions: <code>“/topic/API_TOKEN.SOid.updates”</code>
+- Updates produced by subscriptions: <code>“/topic/API_TOKEN.SOid.updates”</code>
