@@ -18,7 +18,7 @@ client.connect('compose', 'shines', function(frame) {
                 request.meta.method
         ).on('complete', function(data, response) {
              // send back the identifier if any, allowing the requesting client to match the response        
-            data.messageId = request.messageId || null;
+            data.messageId = request.meta.messageId || null;
             client.send('/topic/' + request.meta.authorization + ".to", {}, JSON.stringify(data));
             console.log("result: " + JSON.stringify(data));
         });
