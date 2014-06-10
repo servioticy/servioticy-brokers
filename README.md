@@ -2,14 +2,13 @@ servioticy-brokers
 ==================
 
 Brokers for interacting with servioticy REST API (MQTT, WS+STOMP, TCP+STOMP...)
-
-Online MQTT broker can be reached at api.servioticy.com:1833
-Online STOMP/TCP broker can be reached at api.servioticy.com:1833
-Online STOMP/WS broker can be reached at api.servioticy.com:61623
+- Online MQTT broker can be reached at <code>api.servioticy.com:1833</code>
+- Online STOMP/TCP broker can be reached at <code>api.servioticy.com:1833</code>
+- Online STOMP/WS broker can be reached at <code>api.servioticy.com:61623</code>
 
 In all cases: 
-  User: compose
-  Password: shines
+- User: compose
+- Password: shines
 
 **Payload structure example**:
 
