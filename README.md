@@ -17,7 +17,7 @@ In all cases:
    "meta": {
      "authorization": "API_TOKEN HERE",
      "method": "PUT",
-     "url": "/13944639303973f5530eab507412d88bef305089a7720/streams/weather"
+     "url": "/13944639303973f5530eab507412d88bef305089a7720/streams/weather",
      "messageID": 17772
    },
    "body": {
