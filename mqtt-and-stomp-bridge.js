@@ -18,9 +18,18 @@ client.connect('compose', 'shines', function(frame) {
                 request.meta.method
         ).on('complete', function(data, response) {
              // send back the identifier if any, allowing the requesting client to match the response        
-            data.messageId = request.meta.messageId || null;
-            client.send('/topic/' + request.meta.authorization + ".to", {}, JSON.stringify(data));
-            console.log("result: " + JSON.stringify(data));
+           console.log("input message id: "+request.meta.messageId);
+           response={meta: {}, body:{}};
+           response.meta.messageId = request.meta.messageId || null;
+           response.body = data;
+           console.log("sending: "+JSON.stringify(response));
+           client.send('/topic/'+request.meta.authorization+".to",{},JSON.stringify(response));
         });
     });
 });
+
+process.on('uncaughtException', function (err) {
+    console.error((new Date).toUTCString() + ' uncaughtException:', err.message)
+    console.error(err.stack)
+    process.exit(1)
+})
