@@ -2,7 +2,7 @@ var Stomp = require('stompjs');
 var api = require('restler');
  
 // Use raw TCP sockets
-var client = Stomp.overTCP('api.servioticy.com', 1883);
+var client = Stomp.overTCP('192.168.56.101', 1883);
 // uncomment to print out the STOMP frames
 //client.debug = console.log;
  
@@ -12,7 +12,7 @@ client.connect('compose', 'shines', function(frame) {
         var request = JSON.parse(message.body);
         console.log("Going for a " + request.meta.method);
         console.log("Posted data " + JSON.stringify(request.body));
-        api.json("http://api.servioticy.com" + request.meta.url,
+        api.json("http://localhost:8080" + request.meta.url,
                 request.body,
                 {headers: {'Content-Type': 'application/json', 'Authorization': request.meta.authorization}},
                 request.meta.method
